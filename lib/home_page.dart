@@ -1,7 +1,6 @@
 import 'package:flutter_project1/page/calendar.dart';
 import 'package:flutter_project1/page/chat_page.dart';
 import 'package:flutter_project1/page/dashboard_page.dart';
-import 'package:flutter_project1/page/profile_page.dart';
 import 'package:flutter_project1/page/setting_page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,12 +16,13 @@ class _HomeState extends State<Home> {
   final List<Widget> screens = [
     const DashBoard(),
     const ChatPage(),
-    const ProfilePage(),
     const CreatEvent()
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = DashBoard();
+  // Créez une instance de CreatEvent
+  // final CreatEvent creatEventPage = CreatEvent();
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +32,10 @@ class _HomeState extends State<Home> {
         bucket: bucket,
       ),
       floatingActionButton: FloatingActionButton(
+        
         onPressed: () {
-           setState(() {
-                        currentScreen = CreatEvent();
-                        currentTab = 4;
-                      });
+          // Appelez la fonction _showForm de CreatEvent
+              // creatEventPage.showForm(null); 
         },
         child: Icon(
           Icons.add,
