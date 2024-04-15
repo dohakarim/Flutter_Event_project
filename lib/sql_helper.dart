@@ -10,7 +10,9 @@ class SQLHelper {
       lieu TEXT,
       type TEXT,
       date_evenement TEXT,
-      image TEXT, 
+      
+      image TEXT,  
+
       createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
     )
     """);
